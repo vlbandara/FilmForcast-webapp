@@ -7,11 +7,11 @@ import json
 import re
 
 # Configure the Gemini API key
-GEMINI_API_KEY = "AIzaSyByhzdtQI7yhUNLGjuV6CtBv3nCfDNnePw"
+GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
 genai.configure(api_key=GEMINI_API_KEY)
 
 # OMDB API key
-OMDB_API_KEY = "ba6d1912"
+OMDB_API_KEY = st.secrets["OMDB_API_KEY"]
 
 # Set up the Gemini model with adjusted safety settings
 safety_settings = [
