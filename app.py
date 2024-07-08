@@ -245,8 +245,8 @@ else:
 # Sidebar for API key input and additional features
 with st.sidebar:
     st.subheader("Configuration")
-    gemini_api_key = st.text_input("Enter your Gemini API Key:", type="password", value=GEMINI_API_KEY)
-    omdb_api_key = st.text_input("Enter your OMDB API Key:", type="password", value=OMDB_API_KEY)
+    gemini_api_key = st.text_input("Enter your Gemini API Key:", type="password")
+    omdb_api_key = st.text_input("Enter your OMDB API Key:", type="password")
     if gemini_api_key and omdb_api_key:
         genai.configure(api_key=gemini_api_key)
         OMDB_API_KEY = omdb_api_key
